@@ -64,6 +64,7 @@ export abstract class JsonFormsAbstractControl<
   enabled: boolean;
   hidden: boolean;
   propsPath: string;
+  formfieldApperance: string;
 
   constructor(protected jsonFormsService: JsonFormsAngularService) {
     super();
@@ -127,6 +128,8 @@ export abstract class JsonFormsAbstractControl<
         this.id = props.id;
         this.form.setValue(data);
         this.propsPath = path;
+        this.formfieldApperance =
+          config.formfieldApperance !== undefined ? config.formfieldApperance : "fill";
         this.mapAdditionalProps(props);
       }
     });
