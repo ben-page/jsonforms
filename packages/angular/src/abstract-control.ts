@@ -133,7 +133,6 @@ export abstract class JsonFormsAbstractControl<
         this.mapAdditionalProps(props);
       }
     });
-    this.triggerValidation();
   }
 
   validator: ValidatorFn = (_c: AbstractControl): ValidationErrors | null => {
