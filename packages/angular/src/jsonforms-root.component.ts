@@ -35,18 +35,18 @@ import { JsonFormsAngularService, USE_STATE_VALUE } from './jsonforms.service';
 })
 export class JsonForms implements OnChanges, OnInit {
 
-    @Input() uischema: UISchemaElement;
-    @Input() schema: JsonSchema;
-    @Input() data: any;
-    @Input() renderers: JsonFormsRendererRegistryEntry[];
-    @Input() uischemas: { tester: UISchemaTester; uischema: UISchemaElement; }[];
+    @Input() uischema?: UISchemaElement;
+    @Input() schema?: JsonSchema;
+    @Input() data?: any;
+    @Input() renderers?: JsonFormsRendererRegistryEntry[];
+    @Input() uischemas?: { tester: UISchemaTester; uischema: UISchemaElement; }[];
     @Output() dataChange = new EventEmitter<any>();
     @Input() readonly: boolean;
     @Input() validationMode: ValidationMode;
-    @Input() ajv: Ajv;
-    @Input() config: any;
-    @Input() i18n: JsonFormsI18nState;
-    @Input() additionalErrors: ErrorObject[];
+    @Input() ajv?: Ajv;
+    @Input() config?: any;
+    @Input() i18n?: JsonFormsI18nState;
+    @Input() additionalErrors?: ErrorObject[];
     @Output() errors = new EventEmitter<ErrorObject[]>();
 
     private previousData:any;
